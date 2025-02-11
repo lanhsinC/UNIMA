@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
-        var password = prompt("パスワードを入力してください");
-        if(password != "sawaiscute"){
-            documentbody.innerHTML = "権限不足";
+        var password = "sawaiscute"; // 設定你的密碼
+        var userInput = prompt("請輸入密碼以訪問此網站:");
+        if (userInput !== password) {
+            document.body.innerHTML = "<h1>存取被拒絕</h1>";
         }
-    </script>>
+    </script>
 </head>
 <body class="home">
 
