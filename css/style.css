@@ -21,7 +21,7 @@ a:hover {
 /* header */
 header {
     width: 100%;
-    height: 150px; /* 设置统一的高度 */
+    height: 150px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,16 +34,15 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* 可选：设置最大宽度 */
 }
 
 .header-logo img {
-    height: 100px; /* 设置logo的高度 */
+    height: 100px; 
     width: auto;
 }
 
 .header-contact img {
-    height: 50px; /* 设置联系方式图片的高度 */
+    height: 100px; 
     width: auto;
 }
 
