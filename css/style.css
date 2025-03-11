@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     color: #000;
 }
@@ -16,84 +16,81 @@ a:hover {
     text-decoration: none;
     color: #555;
 }
-@media screen and (max-width:767px) {
-    body {
-        font-size: 15px;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
+
 
 /* header */
 header {
+    width: 100%;
+    height: 150px; /* 设置统一的高度 */
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
-header h1 {
-    margin: 20px 0 0 20px;
+
+.header-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* 可选：设置最大宽度 */
 }
-header nav {
-    margin: 0 0 0 auto;
+
+.header-logo img {
+    height: 100px; /* 设置logo的高度 */
+    width: auto;
 }
-header h1 img {
-    width: 150px;
-    max-width: 200px;
+
+.header-contact img {
+    height: 50px; /* 设置联系方式图片的高度 */
+    width: auto;
 }
-header nav ul {
-    list-style-type: none;
-    margin: 20px 0;
+
+nav {
+    width: 100%;
+    background-color: #e0cceb; /* 可选：设置导航栏背景颜色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* 可选：设置内边距 */
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
     padding: 0;
-    display: flex;
+    margin: 0;
 }
-header nav ul li a,
-header nav ul li a:link,
-header nav ul li a:visited {
-    display: block;
-    padding: 10px 15px;
+
+nav ul li {
+    width: 25%;
+    text-align: center;
+    margin: 0 20px; /* 设置导航项的间距 */
+}
+
+nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    
 }
-header nav ul li a:hover {
-    color: #888;
+
+nav ul li a:hover {
+    color: #ea813b;
 }
-@media screen and (max-width:767px) {
-    header {
-        display: block;
-    }
-    header h1 {
-        margin: 10px 0 0;
-        text-align: center;
-    }
-    header h1 img {
-        width: 150px;
-        max-width: 200px;
-    }
-    header nav ul {
-        margin: 0;
-        flex-wrap: wrap;
-    }
-    header nav ul li {
-        width: 25%;
-    }
-    header nav ul li:last-child {
-        width: 100%;
-    }
-    header nav ul li a,
-    header nav ul li a:link,
-    header nav ul li a:visited {
-        padding: 10px 0;
-        text-align: center;
-    }
-    header nav ul li:last-child a {
-        background: #00b6bd;
-        color: #fff;
-    }
-}
+
+
+
 
 /* footer */
 footer {
-    background: #f2f8f8;
+    background: #e0cceb;;
     padding: 20px;
 }
 footer ul {
@@ -147,7 +144,7 @@ footer p {
     display: block;
     width: 120px;
     height: 50px;
-    background-color: #00b6bd;
+    background-color: #ba68c8;
     color: white;
     text-align: center;
     line-height: 50px;
@@ -165,7 +162,7 @@ main h2 {
     margin: 50px 0 20px;
     font-weight: normal;
     font-size: 25px;
-    color: #00b6bd;
+    color: #ab47bc;
 }
 main p {
     margin: 0 0 15px;
@@ -191,7 +188,7 @@ main .title h1 {
     margin: 0;
     line-height: 1;
     font-size: 40px;
-    color: #00b6bd;
+    color: #6a1b9A;
 }
 main .title ol {
     list-style-type: none;
@@ -231,205 +228,172 @@ main ul {
     margin: 0 0 60px;
     padding: 0 0 0 20px;
 }
-@media screen and (max-width:767px) {
-    main .inner {
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-    main h2 {
-        margin: 40px 0 15px;
-        font-size: 20px;
-    }
-    main dl dt {
-        float: none;
-        padding: 0;
-    }
-    main dl dd {
-        margin: 0 0 10px;
-        padding: 10px 0 10px 0;
-    }
-    main .title {
-        padding: 30px 20px;
-    }
-    main .title h1 {
-        text-align: center;
-        font-size: 25px;
-    }
-    main .title ol {
-        margin: 20px 0 0;
-        display: flex;
-        justify-content: center;
-    }
-    main .title ol li {
-        font-size: 12px;
-    }
-}
+
 
 /* home */
-.home main .visual {
-    background: url(../images/visual.jpg) no-repeat center top;
-    height: 550px;
-    padding: 150px 0 0;
-    box-sizing: border-box;
+.index-image {
+    width: 100%;
+    height: auto;
+    
+  }
+  .index-image img {
+    width: 100%; 
+    height: auto; 
 }
-.home main .visual p {
+.top-image {
+    width: 100%;
+    height: 200px;
+    
+  }
+  .top-image img {
+    width: 100%; 
+    height: 200px; 
+}
+.intro{
+    padding: 0 40px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.outer {
+    width: 100%;
+    height: auto;
+}
+  
+
+
 .home main section {
     display: flex;
     margin-top: 50px;
 }
 .home main section div {
-    padding: 0 40px 0 0;
+    padding: 0 0 0 0;
 }
-.home main section:first-child {
+.home main section:nth-child(odd) {
     flex-direction: row-reverse;
 }
-.home main section:first-child div {
+.home main section:nth-child(odd) div {
     padding: 0 0 0 40px;
 }
-@media screen and (max-width:767px) {
-    .home main .visual {
-        background-size: cover;
-        height: 200px;
-        padding: 40px 30px 0;
-    }
-    .home main section {
-        display: block;
-    }
-    .home main section div,
-    .home main section:first-child div {
-        padding: 0;
-    }
-}
 
-/* course */
-.course main .course-box {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-}
-.course main .course-box div {
-    width: 475px;
-}
-.course main h2 {
-    margin-top: 0;
-}
-@media screen and (max-width:767px) {
-    .course main .course-box {
-        display: block;
-    }
-    .course main .course-box div {
-        width: 100%;
-    }
-}
 
-/* price */
-.price main table {
+
+/* users */
+.users main table {
+    width: 630px;
     border: none;
-}
-.price main table th,
-.price main table td {
     text-align: center;
 }
-.price main table thead th {
+.users main table th,
+.users main table td {
+    text-align: left;
+}
+.users main table thead th {
     background: #00b6bd;
     width: 40%;
     font-size: 18px;
     color: #fff;
 }
-.price main table thead th:first-child {
-    background: none;
-    border: none;
-    width: 20%;
-}
-.price main table td {
+.users main table td {
     font-size: 20px;
 }
-.price main table td span {
-    display: block;
-    font-size: 0.8em;
-}
-.price main .gallery {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.price main .gallery p {
-    margin: 0 0 10px;
-    line-height: 1;
-}
-@media screen and (max-width:767px) {
-    .price main table th,
-    .price main table td,
-    .price main table thead th {
-        font-size: 15px;
-    }
-    .price main table th {
-        padding: 10px 5px;
-    }
+.users main table td span {
+    font-weight: bold;
 }
 
-/* access */
-@media screen and (max-width:767px) {
-    .access main iframe {
-        width: 100%;
-        height: 350px;
-    }
-}
-
-/* entry */
-.entry main .must {
-    margin: 0 5px;
-    color: #d23939;
-}
-.entry main p {
-    margin: 0 0 50px;
-}
-.entry main dl dd {
-    padding-left: 15em;
-}
-.entry main input,
-.entry main textarea,
-.entry main select {
-    border: solid 1px #ccc;
-    padding: 5px;
-    box-sizing: border-box;
-}
-.entry main input[name="email"] {
-    width: 50%;
-}
-.entry main textarea {
-    width: 100%;
-}
-.entry main .submit {
-    margin: 10px 0;
+.process{
+    width: 630px;
+    border: none;
     text-align: center;
 }
-.entry main input[type="submit"] {
+.process h3{
     background: #00b6bd;
-    border: none;
-    border-radius: 35px;
-    margin: 20px 0 50px;
-    padding: 20px;
-    width: 300px;
-    cursor: pointer;
-    font-weight: bold;
+    width: 100%;
     font-size: 18px;
     color: #fff;
 }
-.entry main input[type="submit"]:hover {
+.internsship{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.link a{
+    text-decoration: none;
+    text-align: center;
+
+}
+
+#linkFormBtn{
+    width:300px;
+    padding: 5px 10px;
+    border:solid 1px #000;
+    font-weight:bold;
+    color:#000;
+    font-size: large;
+    font-size: 1.2em;
+}
+
+   /*ホバー時の指定*/
+#linkFormBtn:hover{ 
+    color:#ffffff; 
+    cursor: pointer;
+    background-color: rgb(148, 91, 222);
+}
+
+/* 隐藏表单弹出层 */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-height: 90vh; /* 设置最大高度 */
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+/* 表单容器 */
+.form-container {
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+
+/* 按钮样式 */
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
     opacity: 0.8;
 }
-@media screen and (max-width:767px) {
-    .entry main dl dd {
-        padding-left: 0;
-    }
-    .entry main input[type="submit"] {
-        box-sizing: border-box;
-        max-width: 80%;
-    }
+
+.form-container .cancel {
+    background-color: red;
+}
+
+
+.inner-contact iframe{
+    width: 100%;
+
 }
 
 /* sitemap */
