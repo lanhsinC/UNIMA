@@ -22,14 +22,24 @@
                 <a href="tel:011-790-7553"><img src="images/number.svg" alt="011-790-7553"></a>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="company.html">ユニマについて</a></li>
-                <li><a href="users.html">就労希望の方へ</a></li>
-                <li><a href="collaboration.html">企業の方へ</a></li>
-                <li><a href="entry.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
+        <nav >
+            <div class="menu-main">
+                <ul class="nav-menu">
+                    <li><a href="company.html">ユニマについて</a></li>
+                    <li><a href="users.html">就労希望の方へ</a></li>
+                    <li><a href="collaboration.html">企業の方へ</a></li>
+                    <li><a href="entry.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-toggle">
+                <ul class="nav-menu-mobile">
+                    <li><a href="company.html">会社概要</a></li>
+                    <li><a href="users.html">利用者様</a></li>
+                    <li><a href="collaboration.html">企業様</a></li>
+                    <li><a href="entry.html">問合せ</a></li>
+                </ul>
+            </div>
     </header>
 
 <main>
@@ -74,9 +84,9 @@
     </div>
 </main>
 
-<footer class="bg-dark text-white text-center py-3">
+<footer>
     
-    <div class="footer-icons mt-2">
+    <div class="sns">
         <a href="https://www.instagram.com/unima_asabu" target="_blank">
             <img src="images/Instagram_icon.png" alt="Instagram">
         </a>
@@ -92,5 +102,31 @@
     </div>
 </footer>
 
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navMenu = document.querySelector("nav");
+    const toggleButton = document.querySelector(".menu-toggle");
+
+    // 點擊選單按鈕時，切換導航列的可見性
+    toggleButton.addEventListener("click", function (event) {
+        navMenu.classList.toggle("active");
+        event.stopPropagation(); // 防止點擊事件冒泡
+    });
+
+    // 點擊 NAV 內部時，不關閉導航列
+    navMenu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+
+    // 點擊 NAV 以外的地方時，關閉 NAV
+    document.addEventListener("click", function () {
+        if (navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+        }
+    });
+});
+</script>
 </body>
 </html>
