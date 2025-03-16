@@ -118,6 +118,7 @@ main h2 {
     color: #ab47bc;
 }
 main iframe {
+    width: 100%;
     max-width: 90vw;
 
 }
@@ -137,12 +138,14 @@ section {
     height: auto;
 }
 
-.internsship {
+.internsship ,.inner-contactner{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     width: 100%;
     height: auto;
 }
-.contact-form {
+.contact-form{
     width: 90vw;
     display: flex;
     flex-direction: column;
