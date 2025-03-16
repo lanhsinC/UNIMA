@@ -105,14 +105,33 @@ nav a {
 
 /* 主要內容區域 */
 
-main .inner,.intro {
-    width: 90%;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
     max-width: 990px;
-    margin: 50px 20px;
+    margin: 50px auto;
 }
 main h2 {
     font-size: 25px;
     color: #ab47bc;
+}
+main iframe {
+    width: 90vw;
+
+}
+.teQAzf {
+    width: 100%;
+    height: 100%;
+}
+section {
+    margin: 20px 0;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 /* 圖片調整 */
@@ -121,10 +140,21 @@ main h2 {
     height: auto;
 }
 
+.internsship {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    
 /* 響應式表格 */
 .users main table, .process {
     width: 100%;
-    max-width: 630px;
     text-align: center;
 }
 
