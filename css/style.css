@@ -9,7 +9,8 @@
 body {
     line-height: 1.7;
     font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: 游ゴシック,"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
     color: #000;
     margin: 100px 0 0 0;
     width: 100vw; /* 設定寬度為視窗的100% */
@@ -70,7 +71,7 @@ nav a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #e0cceb;
+    background: linear-gradient(to right, #c69be4, #f9f9f9);
 
 }
 
@@ -96,10 +97,11 @@ nav a {
     font-weight: bold;
     font-size: 1.2em;
     letter-spacing: 1px;
+    color: #36393a;
 }
 
 .nav-menu li a:hover {
-    color: #ea813b;
+    color: #4249d8;
 }
 
 
@@ -133,10 +135,12 @@ section {
 }
 
 /* 圖片調整 */
-.index-image img, .top-image img {
+.index-image img,.top-image img {
     width: 100%;
     height: auto;
+    margin-top: 40px;
 }
+
 
 .internsship ,.inner-contactner{
     display: flex;
@@ -147,13 +151,221 @@ section {
     margin: 0 0;
 }
 .contact-form{
-    width: 90vw;
+    /*width: 90vw;*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/*會社表格*/
+.company-intro h2 {
+    font-family: rocknroll-one, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #707070;
+    padding: 0 0 0 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+  
+  .company-intro h2::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #707070;
+  }
+  
+  .company-intro h2::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-color: #707070;
+  }
+  
+  .company-intro table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: calc(100% - 10px);
+    font-family: vdl-v7marugothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #707070;
+    line-height: 1.8;
+    text-align: justify;
+    word-break: break-all;
+    text-justify: inter-ideograph;
+    margin: 0 0 15px 10px;
+    word-break: break-all;
+  }
+  
+  .company-intro table th, .company-intro table td {
+    border: solid #e7e7e7;
+    border-width: 2px 0;
+  }
+  
+  .company-intro table th {
+    width: 40%;
+    text-align: left;
+  }
+  
+  .company-intro table a {
+    text-decoration: none;
+    color: #4E7575;
+  }
+  
+  .company-intro table a:hover {
+    opacity: 0.5;
+  }
+  
     
+ /*一日流程*/
+.dailywork h2 {
+    font-family: rocknroll-one, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #707070;
+    padding: 0 0 0 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+  
+  .dailywork h2::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #707070;
+  }
+  
+  .dailywork h2::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-color: #707070;
+  }
+  
+  .dailywork table {
+    font-family: vdl-v7marugothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #707070;
+    line-height: 1.8;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .dailywork table tr:nth-of-type(2n-1) {
+    background-color: #eb656514;
+  }
+  
+  .dailywork table th, .skd table td {
+    border: dotted #e7e7e7;
+    border-width: 2px 0;
+    padding: 10px 0;
+  }
+  
+  .dailywork table th {
+    width: 30%;
+  }
+  
+  .dailywork table td {
+    text-align: justify;
+    word-break: break-all;
+    text-justify: inter-ideograph;
+  }
+  
+  .dailywork table span {
+    font-weight: bold;
+  }
+  
+  .dailywork caption {
+    text-align: left;
+  }
+
+.process h2 {
+    font-family: rocknroll-one, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #707070;
+    padding: 0 0 0 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+  
+  .process h2::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #707070;
+  }
+  
+  .process h2::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-color: #707070;
+  }
+  
+  .process h3 {
+    background-color: #FAD4D4;
+    margin: 0 0 4px 0;
+    font-family: vdl-v7marugothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #707070;
+    text-align: center;
+    border: solid #707070 1px;
+    border-width: 1px 0 1px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .process p {
+    font-family: vdl-v7marugothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #707070;
+    line-height: 1.8;
+    text-align: justify;
+    word-break: break-all;
+    text-justify: inter-ideograph;
+    margin: 0 0 20px 0;
+  }
+
 /* 響應式表格 */
 .users main table, .process {
     width: 100%;
@@ -263,4 +475,9 @@ footer img {
         
         font-size: 12px;
     }
+    .index-image img,.top-image img {
+
+        margin-top: 0;
+    }
+    
 }
